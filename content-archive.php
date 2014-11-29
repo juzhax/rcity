@@ -6,6 +6,8 @@
  * @since FoundationPress 1.0
  */
 ?>
+<div class="grid-tile small-12 large-4 column"  style="position:relative;padding-bottom:1em;">
+
 <article class="article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="card">
 	<div class="tileOverlay">
@@ -47,3 +49,4 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 	 ?>
 	</div>
 </article>
+</div>

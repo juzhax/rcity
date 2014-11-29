@@ -1,15 +1,38 @@
 <?php get_header(); ?>
 <div class="row">
-<!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="small-12 large-12 columns" style="position:relative;">
 
+	<h1 class="archive-title"><?php
+$categories = get_the_category();
+$separator = ' ';
+$output = '';
+if($categories){
+	foreach($categories as $category) {
+		$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+	}
+echo trim($output, $separator);
+}
+?></h1>
+	</div>
+
+<!-- Row for main content area -->
+	<div class="small-12 large-12 columns" style="position:relative;" role="main">
 	<?php if ( have_posts() ) : ?>
 
-		<?php /* Start the Loop */ ?>
+				<ul class="tiles">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
+					<?php get_template_part( 'content', 'archive' ); ?>
 		<?php endwhile; ?>
+				</ul>
+				<div class="tiles" id="content">
+<!--
+				<div  class="small-12 large-4 columns" style="position:relative;" ></div>
+-->
+				</div>
 
+<!--		
+		<div id="content"></div>
+-->
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 

@@ -29,4 +29,9 @@ require_once('library/enqueue-scripts.php');
 // Add theme support
 require_once('library/theme-support.php');
 
+// Widgets
+require_once('library/widget-next-post.php');
+require_once('library/widget-more-posts.php');
+require_once('library/widget-recommended-posts.php');
+
 ?>

@@ -20,21 +20,22 @@
 		} else {
 			echo wp_title( ' | ', 'false', 'right' ); bloginfo( 'name' );
 		} ?></title>
-		
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">		
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/app.css" />
-
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-precomposed.png">
-		
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"
+    data-pin-hover="true"
+></script>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action('foundationPress_after_body'); ?>
 	
-	<div class="off-canvas-wrap" data-offcanvas>
+	<div class="off-canvas-wrap thetop" data-offcanvas>
 	<div class="inner-wrap">
 	
 	<?php do_action('foundationPress_layout_start'); ?>
@@ -45,7 +46,7 @@
 		</section>
 		<section class="middle tab-bar-section">
 			
-			<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+			<a href="<?php echo home_url(); ?>"><h1 class="title"><?php bloginfo( 'name' ); ?></h1></a>
 
 		</section>
 	</nav>
@@ -53,6 +54,5 @@
 	<?php get_template_part('parts/off-canvas-menu'); ?>
 
 	<?php get_template_part('parts/top-bar'); ?>
-
 <section class="container" role="document">
 	<?php do_action('foundationPress_after_header'); ?>
