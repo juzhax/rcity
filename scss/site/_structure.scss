@@ -1789,7 +1789,7 @@ fieldset[disabled] .btn-pin.active {
 }
 
 .btn-sm {
-	padding: 2px 8px;
+	padding: 2px 5px;
 	font-size: 15px;
 	line-height: 1.5;
 	border-radius: 2px;
@@ -3368,31 +3368,69 @@ a.list-group-item-danger.active:focus {
 }
 
 
+@media #{$medium-up} {
 
-#slidebox {
-	position: fixed;
-	bottom: 0;
-	right: -305px;
-	margin-bottom: 0;
-
-/*	
-	margin: 5px 0;
-    padding: .5em .5em 0 1em;
-    overflow: hidden;
-    border-color: #e0e0e0;
-    color: #888;
-    font-size: .9em;
-    position: relative;
-    right: 0;
-    z-index: 1	
-*/    
+	#slidebox {
+		position: fixed;
+		bottom: 0px;
+		right: -305px;
+		margin-bottom: 0;
+	/*
+	
+		margin: 5px 0;
+		padding: .5em .5em 0 1em;
+		overflow: hidden;
+		border-color: #e0e0e0;
+		color: #888;
+		font-size: .9em;
+		position: relative;
+		right: 0;
+		z-index: 1	
+	 */   
+		
+	}
+	
+	.slidebox .fb-like-box {
+		height: 60px;
+		width: 300px;
+		margin: -10px 0 0 -13px;
+	}
+	
 }
+@media #{$small-only} {
 
+	#slidebox {
+		position: fixed;
+		bottom: 180px;
+		right: -305px;
+		margin-bottom: 0;
+	/*
+	
+		margin: 5px 0;
+		padding: .5em .5em 0 1em;
+		overflow: hidden;
+		border-color: #e0e0e0;
+		color: #888;
+		font-size: .9em;
+		position: relative;
+		right: 0;
+		z-index: 1	
+	 */   
+		
+	}
+	
+	.slidebox .fb-like-box {
+		height: 60px;
+		width: 300px;
+		margin: -10px 0 0 -13px;
+	}
+	
+}
 .slidebox {
-	height: 100px;
+//	height: 100px;
 	border-radius: 0;
 	border-top-left-radius: 3px;
-	width: 300px;
+//	width: 300px;
 	max-width: 300px;
 	padding: .3em .8em;
     background: #fff;
@@ -3469,12 +3507,6 @@ button.close {
     border: 0;
     -webkit-appearance: none;
     margin: 0;
-}
-
-.slidebox .fb-like-box {
-	height: 60px;
-	width: 100%;
-	margin: -10px 0 0 -13px;
 }
 
 /* Hides navigation links and site footer when infinite scroll is active */
